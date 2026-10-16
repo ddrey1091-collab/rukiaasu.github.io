@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Message for Frienciss May</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background-color: #3d1419;
+            color: #f1d3d6;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .font-cinzel {
+            font-family: 'Cinzel', serif;
+        }
+
+        .font-cormorant {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .font-handwriting {
+            font-family: 'Great Vibes', cursive;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #2a0c10;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #6b242c;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #852d37;
+        }
+
+        .hero-bg {
+            background: radial-gradient(circle, #6b242c 0%, #3d1419 60%, #220a0d 100%);
+        }
+
+        .letter-card {
+            background-color: #521c23;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            position: relative;
+        }
+
+        .corner-border-tl {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 36px;
+            height: 36px;
+            border-top: 1.5px solid rgba(241, 211, 214, 0.6);
+            border-left: 1.5px solid rgba(241, 211, 214, 0.6);
+            pointer-events: none;
+        }
+        .corner-border-tr {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 36px;
+            height: 36px;
+            border-top: 1.5px solid rgba(241, 211, 214, 0.6);
+            border-right: 1.5px solid rgba(241, 211, 214, 0.6);
+            pointer-events: none;
+        }
+        .corner-border-bl {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            width: 36px;
+            height: 36px;
+            border-bottom: 1.5px solid rgba(241, 211, 214, 0.6);
+            border-left: 1.5px solid rgba(241, 211, 214, 0.6);
+            pointer-events: none;
+        }
+        .corner-border-br {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 36px;
+            height: 36px;
+            border-bottom: 1.5px solid rgba(241, 211, 214, 0.6);
+            border-right: 1.5px solid rgba(241, 211, 214, 0.6);
+            pointer-events: none;
+        }
+
+        .divider-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 2.5rem 0;
+            position: relative;
+        }
+        .divider-line {
+            flex-grow: 1;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(230, 184, 190, 0.35), transparent);
+        }
+        .divider-heart {
+            color: #e25569;
+            padding: 0 12px;
+            font-size: 0.85rem;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(8px); }
+        }
+        .floating {
+            animation: float 2.5s ease-in-out infinite;
+        }
+
+        /* Heart Glow Effect */
+        .glowing-heart {
+            filter: drop-shadow(0 0 18px rgba(255, 70, 100, 0.85));
+            animation: pulse-heart 1.8s ease-in-out infinite;
+        }
+
+        @keyframes pulse-heart {
+            0%, 100% { transform: scale(1); filter: drop-shadow(0 0 15px rgba(255, 70, 100, 0.7)); }
+            50% { transform: scale(1.1); filter: drop-shadow(0 0 28px rgba(255, 80, 120, 1)); }
+        }
+
+        /* Glowing Yes Button */
+        .btn-yes-glow {
+            background-color: #ff4d6d;
+            box-shadow: 0 0 25px rgba(255, 77, 109, 0.75);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .btn-yes-glow:hover {
+            background-color: #ff2a55;
+            box-shadow: 0 0 35px rgba(255, 77, 109, 0.95);
+        }
+    </style>
+</head>
+<body class="selection:bg-rose-900 selection:text-white">
+
+    <!-- HERO SECTION -->
+    <section class="hero-bg h-screen w-screen flex flex-col justify-center items-center text-center relative px-6">
+        <div class="max-w-4xl mx-auto flex flex-col items-center gap-4">
+            <p class="font-cormorant text-xs sm:text-sm tracking-[0.3em] text-[#e6b8be] uppercase opacity-90">
+                A MESSAGE, JUST FOR YOU
+            </p>
+            <h1 class="font-cormorant text-4xl sm:text-6xl md:text-7xl font-light tracking-widest text-white drop-shadow-[0_0_25px_rgba(255,255,255,0.4)] my-2">
+                FRIENCISS MAY
+            </h1>
+            <p class="font-cormorant italic text-lg sm:text-xl text-[#f1d3d6] opacity-90">
+                This page was made with love — scroll down <span class="not-italic ml-1">🌷</span>
+            </p>
+        </div>
+
+        <a href="#letter-section" class="absolute bottom-10 flex flex-col items-center text-[#e6b8be] opacity-80 hover:opacity-100 transition-opacity focus:outline-none floating">
+            <span class="text-[11px] tracking-widest font-cormorant uppercase mb-1">SCROLL</span>
+            <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </a>
+    </section>
+
+    <!-- LETTER SECTION -->
+    <section id="letter-section" class="min-h-screen hero-bg py-16 px-4 sm:px-6 md:px-8 flex justify-center items-center">
+        <div class="w-full max-w-2xl letter-card rounded-md p-8 sm:p-12 md:p-16 my-8">
+            <!-- Thin Corner Borders -->
+            <div class="corner-border-tl"></div>
+            <div class="corner-border-tr"></div>
+            <div class="corner-border-bl"></div>
+            <div class="corner-border-br"></div>
+
+            <div class="text-right mb-8">
+                <span class="font-cormorant text-[11px] sm:text-xs tracking-[0.25em] text-[#e6b8be] uppercase opacity-85">
+                    FEBRUARY 14, 2025
+                </span>
+            </div>
+
+            <h2 class="font-cormorant italic text-2xl sm:text-3xl text-rose-300 font-normal mb-8">
+                My dearest Frienciss May,
+            </h2>
+
+            <!-- Letter Body Paragraphs -->
+            <div class="space-y-6 text-[#f5dedf] font-cormorant text-lg sm:text-xl leading-relaxed font-light">
+                <p>
+                    There are things in this world that are difficult to say out loud — not because they aren't true, but because they are so deeply felt that words seem too small to carry them. This is my attempt, anyway.
+                </p>
+                
+                <p>
+                    I think about the way you smile when something genuinely makes you happy — how it reaches your eyes before it even reaches your lips. I think about how much lighter everything feels when you're around. I think about how I never want to stop learning who you are.
+                </p>
+                
+                <p>
+                    You are not just someone I care about, Frienciss. You are the reason I want to be better, kinder, more present. You are the person I look for in a crowded room. You are the first thought I have in the morning and the warmest one I carry through the day.
+                </p>
+
+                <p>
+                    I know I'm just your IT boyfriend — more comfortable with code than with poetry — but even I know that what I feel for you is something I never want to debug or rewrite. It's exactly right, just the way it is.
+                </p>
+
+                <p>
+                    So this Valentine's Day, I made you this little corner of the internet — just for you, just from me — because you deserve to feel as extraordinary as you truly are.
+                </p>
+            </div>
+
+            <div class="divider-container">
+                <div class="divider-line"></div>
+                <div class="divider-heart">♥</div>
+                <div class="divider-line"></div>
+            </div>
+
+            <div class="mt-8">
+                <p class="font-cormorant italic text-base sm:text-lg text-[#e6b8be] opacity-90 mb-2">
+                    Forever yours,
+                </p>
+                <div class="flex items-center gap-2">
+                    <span class="font-cormorant font-semibold text-xl sm:text-2xl tracking-widest text-white">
+                        JM
+                    </span>
+                    <span class="text-lg">🌷</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VALENTINE QUESTION SECTION -->
+    <section id="valentine-section" class="hero-bg min-h-screen flex flex-col justify-center items-center text-center px-4 relative overflow-hidden transition-all duration-500">
+        <div id="question-container" class="max-w-xl mx-auto flex flex-col items-center gap-6 z-10">
+            
+            <h2 class="font-cormorant text-3xl sm:text-5xl md:text-6xl font-light tracking-wider text-white drop-shadow-[0_0_20px_rgba(255,255,255,0.3)]">
+                WILL YOU BE MY VALENTINE?
+            </h2>
+
+            <p class="font-cormorant italic text-base sm:text-lg text-[#f1d3d6] opacity-90">
+                Because this heart only beats for you, Frienciss May 🌹
+            </p>
+
+            <!-- Glowing Heart -->
+            <div class="my-4">
+                <div class="text-6xl sm:text-7xl glowing-heart cursor-default">
+                    ❤️
+                </div>
+            </div>
+
+            <!-- YES Button -->
+            <div class="w-full flex justify-center items-center my-2">
+                <button id="yesBtn" onclick="sayYes()" class="btn-yes-glow font-cormorant text-white px-8 py-3.5 rounded-sm font-semibold tracking-widest text-base sm:text-lg uppercase flex items-center justify-center gap-2 cursor-pointer transition-all duration-300">
+                    OKAY FINE... YES! 💕
+                </button>
+            </div>
+
+            <!-- NO Button -->
+            <button id="noBtn" class="border border-neutral-400/50 bg-neutral-800/60 hover:bg-neutral-700/60 text-neutral-300 font-cormorant text-xs px-6 py-2 rounded-sm tracking-widest uppercase transition-all duration-200 mt-2">
+                NO
+            </button>
+        </div>
+
+        <!-- CELEBRATION CONTAINER (Hidden initially) -->
+        <div id="celebration-container" class="hidden max-w-xl mx-auto flex flex-col items-center gap-6 z-10 text-center">
+            <div class="flex items-center justify-center gap-3 text-3xl sm:text-4xl mb-2">
+                <span>💖</span>
+                <span>✨</span>
+                <span>🤍</span>
+            </div>
+
+            <h2 class="font-cormorant text-4xl sm:text-6xl md:text-7xl font-normal tracking-wider text-[#f5c2ca] drop-shadow-[0_0_30px_rgba(255,100,150,0.8)]">
+                SHE SAID YES! 🎉
+            </h2>
+
+            <p class="font-cormorant italic text-lg sm:text-2xl text-[#f5dedf] mt-2">
+                You've made this the best Valentine's Day ever, Frienciss May.
+            </p>
+
+            <p class="font-cormorant italic text-base sm:text-lg text-[#e6b8be] opacity-90 mt-4">
+                — JM loves you so much 🌷
+            </p>
+        </div>
+    </section>
+
+    <script>
+        const noBtn = document.getElementById('noBtn');
+        const yesBtn = document.getElementById('yesBtn');
+        const questionContainer = document.getElementById('question-container');
+        const celebrationContainer = document.getElementById('celebration-container');
+
+        let noClickCount = 0;
+
+        const yesPhrases = [
+            "OKAY FINE... YES! 💕",
+            "YES YES YES!! 🌷 💜",
+            "PLEASE JUST CLICK ME 💖 🥺"
+        ];
+
+        function handleNoInteraction(e) {
+            if (e) e.preventDefault();
+            noClickCount++;
+            
+            if (noClickCount < 3) {
+                const phraseIndex = Math.min(noClickCount, yesPhrases.length - 1);
+                yesBtn.innerText = yesPhrases[phraseIndex];
+
+                const currentPaddingY = 14 + (noClickCount * 6);
+                const currentPaddingX = 32 + (noClickCount * 12);
+                const currentFontSize = 16 + (noClickCount * 3);
+                
+                yesBtn.style.padding = `${currentPaddingY}px ${currentPaddingX}px`;
+                yesBtn.style.fontSize = `${Math.min(currentFontSize, 26)}px`;
+
+                const padding = 50;
+                const maxX = window.innerWidth - noBtn.offsetWidth - padding;
+                const maxY = window.innerHeight - noBtn.offsetHeight - padding;
+                
+                const randomX = Math.max(padding, Math.random() * maxX);
+                const randomY = Math.max(padding, Math.random() * maxY);
+                
+                noBtn.style.position = 'fixed';
+                noBtn.style.left = `${randomX}px`;
+                noBtn.style.top = `${randomY}px`;
+            } else {
+                // Mawawala pagkatapos ng 3 clicks
+                noBtn.style.display = 'none';
+            }
+        }
+
+        noBtn.addEventListener('click', handleNoInteraction);
+        noBtn.addEventListener('mouseover', function() {
+            if (noClickCount < 3) {
+                const padding = 50;
+                const maxX = window.innerWidth - noBtn.offsetWidth - padding;
+                const maxY = window.innerHeight - noBtn.offsetHeight - padding;
+                
+                const randomX = Math.max(padding, Math.random() * maxX);
+                const randomY = Math.max(padding, Math.random() * maxY);
+                
+                noBtn.style.position = 'fixed';
+                noBtn.style.left = `${randomX}px`;
+                noBtn.style.top = `${randomY}px`;
+            }
+        });
+
+        function sayYes() {
+            questionContainer.classList.add('hidden');
+            celebrationContainer.classList.remove('hidden');
+            noBtn.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
